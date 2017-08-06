@@ -1,17 +1,15 @@
 #left {
     top: 0%;
     position: relative;
-    margin-left: 0%;
-    margin-right: auto;
     height: 100%;
     width: 50%;
     border: 1px solid black;
+    float: left;
 }
 
 #right {
     position: relative;
-    margin-left: auto;
-    margin-right: 0%;
+    margin-left: 50%;
     width: 50%;
     height: 100%;
     border: 1px solid green;
@@ -41,4 +39,27 @@ body {
 .my-legend {
     display: block;
     border: 1px solid grey;
+    position: relative;
+    padding-top: 20px;
+}
+
+.legend-labels { list-style: none; }
+.legend-labels li { float: left; margin-right: 10px; }
+.legend-labels span { border: 2px solid #000000; float: left; width: 12px; height: 12px; margin: 2px; }
+
+.legend-labels .correct { background-color: #00ff00; }
+.legend-labels .danger { background-color: #ff0000; }
+.legend-labels .unattempted { background-color: #ffffff; }
+.legend-labels .current { background-color: #ffff00; }
+
+.legend-title{
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.clearer{
+    height: 0;
+    clear: both;
 }
