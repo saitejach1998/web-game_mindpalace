@@ -10,7 +10,7 @@ var submitred = document.getElementById('Submit-red')
 var trail = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 var consQ = 0;
 var isLadder = false;
-let flag123 = false;
+//let flag123 = false;
 
 
 //const { remote, ipcRenderer } = require('electron')
@@ -23,7 +23,7 @@ const grey = "#ccccb3"
 const green = "#008744"
 
 initBoard = () => {
-        flag123 = true
+        //flag123 = true
         for (rowIndex = 0; rowIndex < 10; rowIndex++) {
         var cell = document.getElementById('board').rows[rowIndex].cells[liveZone[rowIndex]];
         cell.style.transition = 'background 1000ms ease-in-out'
@@ -45,17 +45,31 @@ getCurrentQuestion = (questionNo) => {
     question.textContent = json[questionNo]['question']
 
     imagediv = document.getElementById('picture')
-    if ('imageLink' in json[questionNo]) {
+    if ('Imagelink' in json[questionNo]) {
+        console.log('picture')
         imagediv.style.display = 'block'
         var image = document.getElementById('image')
-        image.src = "./pictures/" + questionNo + ".jpg"
+        image.src = json[questionNo]['Imagelink']
     } else {
         imagediv.style.display = 'none'
     }
+    document.getElementById('userAnswer').value = null
     document.getElementById('userAnswer').focus()
+
 }
 
 endGame = () => {}
+document.getElementById('userAnswer').onkeypress=function(e){
+    if(e.keyCode==13){
+        document.getElementById('Submit').click();
+    }
+}
+
+document.getElementById('randomAnswer').onkeypress=function(e){
+    if(e.keyCode==13){
+        document.getElementById('Submit-red').click();
+    }
+}
 
 submitred.addEventListener('click', () => {
     let redAnswer = document.getElementById('randomAnswer')
@@ -68,7 +82,6 @@ submitred.addEventListener('click', () => {
         )*/
         trail[currLevel]++
         userAnswer = document.getElementById('userAnswer')
-        userAnswer.value = null
         userAnswer.focus()
         //ipcRenderer.send('change-colour', currLevel, 'yellow')
         changeBoardState(currLevel,'yellow')
@@ -89,7 +102,7 @@ submitred.addEventListener('click', () => {
     document.getElementById('red-zone').style.display = 'none'
     document.getElementById('quiz').style.display = 'block'
     redAnswer.value = null;
-
+    userAnswer.value = null
 }, false)
 
 submitButton.addEventListener('click', () => {
