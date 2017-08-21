@@ -60,12 +60,12 @@ endGame = () => {}
 submitred.addEventListener('click', () => {
     let redAnswer = document.getElementById('randomAnswer')
     if ((redAnswer.value == hiddenZones[15 - questionNum][0] || redAnswer.value == hiddenZones[15 - questionNum][1])) {
-        alert("correct")
-        /*swal(
+        //alert("correct")
+        swal(
             'Good job!',
             'You got it right!',
             'success'
-        )*/
+        )
         trail[currLevel]++
         userAnswer = document.getElementById('userAnswer')
         userAnswer.value = null
@@ -73,12 +73,12 @@ submitred.addEventListener('click', () => {
         //ipcRenderer.send('change-colour', currLevel, 'yellow')
         changeBoardState(currLevel,'yellow')
     } else {
-        alert("better luck next time")
-        /*swal(
+        //alert("better luck next time")
+        swal(
             'Hard Luck...',
             'Better luck Next time!',
             'error'
-        )*/
+        )
         isLadder = false
         getCurrentQuestion(++questionNum)
         //ipcRenderer.send('change-colour', currLevel, 'yellow')
@@ -97,12 +97,12 @@ submitButton.addEventListener('click', () => {
 
     let userAnswer = document.getElementById('userAnswer')
     if (userAnswer.value == json[questionNum]['answer']) {
-        alert('answered')
-        /*swal(
+        //alert('answered')
+        swal(
             'Good job!',
             'You got it right!',
             'success'
-        )*/
+        )
         //ipcRenderer.send('change-colour', currLevel, "green")
         changeBoardState(currLevel,'green')
         currLevel++;
@@ -126,24 +126,24 @@ submitButton.addEventListener('click', () => {
         changeBoardState(currLevel,'yellow')
         getCurrentQuestion(questionNum)
         if (isLadder == 1)
-        alert('You Have won a ladder question.')
-            /*swal(
+        //alert('You Have won a ladder question.')
+            swal(
             'Yay..',
             'You won a ladder question',
 
             'question'
-        )*/
+        )
         userAnswer.value = null
 
     } else {
         consQ = 0
         if (trail[currLevel] == 0) {
-            alert('You have entered an incorrect answer.Prepare to test your luck')
-            /*swal(
+        //    alert('You have entered an incorrect answer.Prepare to test your luck')
+            swal(
                 'Oops...',
                 'You got it wrong!',
                 'error'
-            )*/
+            )
 
             //ipcRenderer.send('change-colour', currLevel, 'red')
             changeBoardState(currLevel,'red')
@@ -152,12 +152,12 @@ submitButton.addEventListener('click', () => {
             document.getElementById('randomanswer').focus()
             userAnswer.value = null
         } else {
-            alert("wrong")
-        /*    swal(
+            //alert("wrong")
+        swal(
                 'Oops...',
                 'You got it wrong!\n Prepare to test your luck',
                 'error'
-            )*/
+            )
             getCurrentQuestion(++questionNum)
         }
 

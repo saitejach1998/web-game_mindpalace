@@ -39,9 +39,10 @@ body {
 
 .my-legend {
     display: block;
-    !border: 1px solid grey;
+    !border: 1px solid blue;
     position: relative;
     padding-top: 20px;
+     
 }
 
 .legend-labels {
