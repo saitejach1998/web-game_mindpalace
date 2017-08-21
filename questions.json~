@@ -33,12 +33,12 @@
     {
       "question": "3 distinct balls are placed as shown below. Each ball represents a digit. The �+� operator signifies addition. Which digit is represented by the blue ball?",
       "answer": "1",
-      "Imagelink": "Images/circlecoloured.jpg"
+      "Imagelink": "Images/"
     },
     {
       "question": "Find �y/3�.",
       "answer": "9",
-      "Imagelink": "Images/matrixnumber.jpg"
+      "Imagelink": "Images/"
     },
     {
       "question": "The ratio of a two-digit natural number to a number formed by reversing its digits is 4 : 7. If �a� is the sum of all the numbers of all such pairs, Find [(a/30)-2].",
