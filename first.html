@@ -1,9 +1,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="first.css">
-
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -151,12 +151,32 @@
             </div>
         </div>
         <div id="right">
+            <div id="quiz" class="quiz">
+                <div id="question">
+                    <p id="q"></p>
+                </div>
+                <div id="picture">
+                    <img src="" id="image" alt="">
+                </div>
+                <div id="answer">
+                    <input type="number" id="userAnswer" value="" />
+                    <input type="button" id="Submit" value="Submit" />
+                </div>
+            </div>
+            <div id="red-zone" class="red-zone" style="display:none;">
+                <div id="question-red">
+                    <p id="q-r">Enter a number in between 0 and 9 (inclusive)</p>
+                </div>
+                <div id="answer-red">
+                    <input type="number" id="randomAnswer" value="" />
+                    <input type="button" id="Submit-red" value="Submit" />
+                </div>
 
-
+            </div>
         </div>
 
 </body>
 
-<script src="load.js"></script>
+<script src="first.js"></script>
 
 </html>
