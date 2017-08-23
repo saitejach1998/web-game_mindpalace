@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
+    <title>Game</title>
     <link rel="stylesheet" href="first.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
@@ -9,10 +11,10 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" class="main">
         <!-- Main Div -->
-        <div id="left">
-            <div id="table-div">
+        <div id="left" class="left">
+            <div id="table-div" class="table-div">
                 <table border="1" width="500" height="500" class="board" id="board">
                     <tr>
                         <td> </td>
@@ -137,14 +139,14 @@
                 </table>
             </div>
 
-            <div class='my-legend'>
-                <div class='legend-title'>Livezones</div>
-                <div class='legend-scale'>
-                    <ul class='legend-labels'>
-                        <li id='correct'><span class='correct'></span>Correct</li>
-                        <li id='danger'><span class='danger'></span>Danger</li>
-                        <li id='unattempted'><span class='unattempted'></span>Unattempted</li>
-                        <li id='current'><span class='current'></span>Current</li>
+            <div class="my-legend">
+                <div class="legend-title">Livezones</div>
+                <div class="legend-scale">
+                    <ul class="legend-labels">
+                        <li class="list-correct"><span class="correct"></span>Correct</li>
+                        <li class="list-danger"><span class="danger"></span>Danger</li>
+                        <li class="list-unattempted"><span class="unattempted"></span>Unattempted</li>
+                        <li class="list-current"><span class="current"></span>Current</li>
                     </ul>
                     <div class="clearer"></div>
                 </div>
@@ -154,13 +156,13 @@
         </div>
         <div id="right">
             <div id="quiz" class="quiz">
-                <div id="question">
-                    <p id="q"></p>
+                <div id="question" class="questions">
+                    <p id="q" class="q"></p>
                 </div>
-                <div id="picture">
-                    <img src="" id="image" alt="">
+                <div id="picture" class="picture">
+                    <img src="dummy.png" id="image" alt="">
                 </div>
-                <div id="answer">
+                <div id="answer" class="answer">
                     <input type="number" id="userAnswer" value="" />
                     <input type="button" id="Submit" value="Submit" />
                 </div>
@@ -169,14 +171,14 @@
                 <div id="question-red">
                     <p id="q-r">Enter a number in between 0 and 9 (inclusive)</p>
                 </div>
-                <div id="answer-red">
+                <div id="answer-red" class="answer-red">
                     <input type="number" id="randomAnswer" value="" />
                     <input type="button" id="Submit-red" value="Submit" />
                 </div>
 
             </div>
         </div>
-
+    </div>
 </body>
 
 <script src="first.js"></script>
