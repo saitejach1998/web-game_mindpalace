@@ -10,6 +10,7 @@ var submitred = document.getElementById('Submit-red');
 var trail = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var consQ = 0;
 var isLadder = false;
+var NoTrialVisits = 0;
 //let flag123 = false;
 
 
@@ -38,6 +39,9 @@ initBoard = function(){
     }
 };
 
+sendPayload = function(){
+    var payload = {'teamName': teamName,'NoTrialVisits': NoTrialVisits};
+};
 
 getCurrentQuestion = function(questionNo){
     var question = document.getElementById('question');
@@ -58,6 +62,7 @@ getCurrentQuestion = function(questionNo){
 
 };
 
+
 endGame = function(){};
 
 document.getElementById('userAnswer').onkeypress=function(e){
@@ -73,6 +78,7 @@ document.getElementById('randomAnswer').onkeypress=function(e){
 };
 
 submitred.addEventListener('click', function(){
+    NoTrialVisits++;
     var redAnswer = document.getElementById('randomAnswer');
     if ((redAnswer.value == hiddenZones[15 - questionNum][0] || redAnswer.value == hiddenZones[15 - questionNum][1])) {
         //alert("correct")
