@@ -2,4 +2,4 @@
 website based game
 
 # Ranking Algorithm
-(((((nolivezone)*(10))/(questionsattempted))*(currlivezone)) - (NoTrialVisits))
+(((((currlivezone)*(10))/(questionsattempted))*(currlivezone)) - (NoTrialVisits))

@@ -10,7 +10,7 @@ var submitred = document.getElementById('Submit-red');
 var trail = Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var consQ = 0;
 var isLadder = false;
-var NoTrialVisits = 0;
+var noTrialVisits = 0;
 //let flag123 = false;
 
 
@@ -22,6 +22,8 @@ var red = "#FF0000";
 var yellow = "#ffff00";
 var grey = "#ccccb3";
 var green = "#008744";
+
+
 
 initBoard = function(){
         //flag123 = true
@@ -40,17 +42,19 @@ initBoard = function(){
 };
 
 sendPayload = function(){
-    var payload = {'teamName': teamName,'NoTrialVisits': NoTrialVisits};
+    var payload = {'teamName': localStorage.getItem("teamName"),'noTrialVisits':noTrialVisits,"currLevel":currLevel,'noQuestions':questionNum};
+    console.log(payload);
+    $.post('./ranking.php',payload,function(response,status){
+        console.log(response);
+    });
 };
 
 getCurrentQuestion = function(questionNo){
     var question = document.getElementById('question');
-    console.log("inside getquestion");
     question.textContent = json[questionNo].question;
 
     imagediv = document.getElementById('picture');
     if ('Imagelink' in json[questionNo]) {
-        console.log('picture');
         imagediv.style.display = 'block';
         var image = document.getElementById('image');
         image.src = json[questionNo].Imagelink;
@@ -78,7 +82,6 @@ document.getElementById('randomAnswer').onkeypress=function(e){
 };
 
 submitred.addEventListener('click', function(){
-    NoTrialVisits++;
     var redAnswer = document.getElementById('randomAnswer');
     if ((redAnswer.value == hiddenZones[15 - questionNum][0] || redAnswer.value == hiddenZones[15 - questionNum][1])) {
         //alert("correct")
@@ -158,10 +161,11 @@ submitButton.addEventListener('click', function(){
     } else {
         consQ = 0;
         if (trail[currLevel] == 0) {
+            noTrialVisits++;
         //    alert('You have entered an incorrect answer.Prepare to test your luck')
             swal(
                 'Oops...',
-                'You got it wrong!',
+                'You got it wrong!\n Prepare to test your luck',
                 'error'
             );
 
@@ -169,18 +173,21 @@ submitButton.addEventListener('click', function(){
             changeBoardState(currLevel,'red');
             document.getElementById('red-zone').style.display = 'block';
             document.getElementById('quiz').style.display = 'none';
-            document.getElementById('randomanswer').focus();
+            document.getElementById('randomAnswer').focus();
             userAnswer.value = null;
         } else {
             //alert("wrong")
         swal(
-                'Oops...',
-                'You got it wrong!\n Prepare to test your luck',
-                'error'
+            'Oops...',
+            'You got it wrong!',
+            'error'
             );
             getCurrentQuestion(++questionNum);
+            trail[currLevel] = 0;
         }
     }
+    console.log("end qes");
+    sendPayload();
 }, false);
 
 changeBoardState = function(currLevel, colour){
@@ -198,8 +205,6 @@ changeBoardState = function(currLevel, colour){
 
 $.getJSON('questions.json',function(data){
     json = data.Q;
-    console.log(data);
-    //informationArray.push("success");
 })
     .done(function(){
         initBoard();
