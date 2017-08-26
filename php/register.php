@@ -1,6 +1,6 @@
 <?php
 $bar = isset($_POST["name"]) ? $_POST["name"] : null;
-$fname = getcwd()."/Ranking.csv";
+$fname = "../data/Ranking.csv";
 if (file_exists($fname)) {
     $file = fopen($fname,"a+");
     fwrite($file,"0,".$bar.",0"."\n");

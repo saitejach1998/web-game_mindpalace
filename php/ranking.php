@@ -4,9 +4,9 @@
     $currLevel = (int)$_POST['currLevel'];
     $noQuestions =(int) $_POST['noQuestions'];
 
-    $score = ((10*$currLevel*$currLevel)/($noQuestions))-$noTrialVisits;
-    $file = getcwd()."/Ranking.csv";
-    $rankfile = file("Ranking.csv");
+    $score = (int)((10*$currLevel*$currLevel)/($noQuestions))-$noTrialVisits;
+    $file = "../data/Ranking.csv";
+    $rankfile = file("../data/Ranking.csv");
     $size = sizeof($rankfile);
     $teamNameList = array();
     $scoreList = array();

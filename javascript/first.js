@@ -44,7 +44,7 @@ initBoard = function(){
 sendPayload = function(){
     var payload = {'teamName': localStorage.getItem("teamName"),'noTrialVisits':noTrialVisits,"currLevel":currLevel,'noQuestions':questionNum};
     console.log(payload);
-    $.post('./ranking.php',payload,function(response,status){
+    $.post('/php/ranking.php',payload,function(response,status){
         console.log(response);
     });
 };
@@ -203,7 +203,7 @@ changeBoardState = function(currLevel, colour){
     }
 };
 
-$.getJSON('questions.json',function(data){
+$.getJSON('/data/questions.json',function(data){
     json = data.Q;
 })
     .done(function(){

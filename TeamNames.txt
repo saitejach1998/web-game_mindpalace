@@ -1,5 +1,0 @@
-teamA
-Hala Madrid
-Enter team name
-teamA1
-TeamC
