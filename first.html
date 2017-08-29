@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Game</title>
-    <link rel="stylesheet" href="./css/first.css">
+    <link rel="stylesheet" href="first.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
+ 
 </head>
 
 <body>
@@ -139,14 +138,14 @@
                 </table>
             </div>
 
-            <div class="my-legend">
-                <div class="legend-title">Livezones</div>
-                <div class="legend-scale">
-                    <ul class="legend-labels">
-                        <li id="correct"><span class="correct"></span>Correct</li>
-                        <li id="danger"><span class="danger"></span>Danger</li>
-                        <li id="unattempted"><span class="unattempted"></span>Unattempted</li>
-                        <li id="current"><span class="current"></span>Current</li>
+            <div class='my-legend'>
+                <div class='legend-title'>Livezones</div>
+                <div class='legend-scale'>
+                    <ul class='legend-labels'>
+                        <li id='correct'><span class='correct'></span>Correct</li>
+                        <li id='danger'><span class='danger'></span>Danger</li>
+                        <li id='unattempted'><span class='unattempted'></span>Unattempted</li>
+                        <li id='current'><span class='current'></span>Current</li>
                     </ul>
                     <div class="clearer"></div>
                 </div>
@@ -160,11 +159,11 @@
                     <p id="q"></p>
                 </div>
                 <div id="picture">
-                    <img src="dummy.png" id="image" alt="">
+                    <img src="" id="image" alt="">
                 </div>
                 <div id="answer">
-                    <input type="number" id="userAnswer" value="" />
-                    <input type="button" id="Submit" value="Submit" />
+                    <input type="text" id="userAnswer" value="" />
+                    <input type="button" class="button" id="Submit" value="Submit" />
                 </div>
             </div>
             <div id="red-zone" class="red-zone" style="display:none;">
@@ -172,15 +171,17 @@
                     <p id="q-r">Enter a number in between 0 and 9 (inclusive)</p>
                 </div>
                 <div id="answer-red">
-                    <input type="number" id="randomAnswer" value="" />
-                    <input type="button" id="Submit-red" value="Submit" />
+                    <input type="text" id="randomAnswer" />
+                    <input type="button"class="button" id="Submit-red" value="Submit" />
                 </div>
+
+ 
 
             </div>
         </div>
-    </div>
+
 </body>
 
-<script src="./javascript/first.js"></script>
+<script src="first.js"></script>
 
 </html>

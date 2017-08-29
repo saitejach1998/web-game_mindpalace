@@ -1,0 +1,70 @@
+{
+  "Q": [
+    {
+      "question": "6 kg of Rs 8/kg wheat is mixed with 3 kg of another type of wheat to get a mixture costing Rs 10/kg. If the price of the added wheat is Rs x/kg, then find the value of [x/2].",
+      "answer": "7"
+    },
+    {
+      "question": "Water is being filled in a uniform bottle at a uniform rate. If 3/7th of the bottle is filled in 1 minute, the number of seconds it would take to fill the complete bottle is �x�. Find x/70.",
+      "answer": "2"
+    },
+    {
+      "question": "All of the students at a college are majoring in Computer Science, Applied Mathematics or both. 73% of the students are Computer Science majors & 62% are Applied Math majors. If there are 200 students and the number of students majoring in both Computer Science & Applied Mathematics is �x�, then what is x/14?",
+      "answer": "5"
+    },
+    {
+      "question": "A group of 20 people has the oldest person with 90 years of age. The average of the group is reduced by 4, if the oldest person is reduced by someone new. If the age of the new person is �b�, Find b/10.",
+      "answer": "1"
+    },
+    {
+      "question": "For the above mentioned time, what is the angle between the minute and the hour hand (in degrees)?",
+      "answer": "5",
+      "Imagelink": "Images/clock.jpg"
+    },
+    {
+      "question": "A magic square is a 3X3 square wherein each cell is filled with a number ranging from 1 to 9 (The numbers are non-repetitive).The unique property of this square is that the sum of numbers through all configurations (rows, columns, diagonals) yields the same value.Given a portion of the magic square, find �X� that satisfies all the conditions of this unique square.",
+      "answer": "5",
+      "Imagelink": "Images/magic_square.png"
+    },
+    {
+      "question": "The difference between Mukesh�s and Manish�s age is 4 years and the difference between Manish�s and Mayank�s age is 10 years. If the maximum possible value of the sum of the difference in their ages, taken two at a time is �p�, Find p/7.",
+      "answer": "4"
+    },
+    {
+      "question": "3 distinct balls are placed as shown below. Each ball represents a digit. The �+� operator signifies addition. Which digit is represented by the blue ball?",
+      "answer": "1",
+      "Imagelink": "Images/circlecoloured.jpg"
+    },
+    {
+      "question": "Find �y/3�.",
+      "answer": "9",
+      "Imagelink": "Images/matrixnumber.jpg"
+    },
+    {
+      "question": "The ratio of a two-digit natural number to a number formed by reversing its digits is 4 : 7. If �a� is the sum of all the numbers of all such pairs, Find [(a/30)-2].",
+      "answer": "9"
+    },
+    {
+      "question": "Meera was studying for her examinations and the lights went off. It was around 2:00 AM. She lighted two uniform candles of equal length but one thicker than the other. The thick candle is supposed to last six hours and the thin one three hours. When she finally went to sleep, the thick candle was twice as long as the thin one. For how many hours did Meera study in candle light?",
+      "answer": "2"
+    },
+    {
+      "question": "A king asks a learned man to visit his palace, to which the learned man responds �I will come someday next month but I won�t tell you on which day. Further, you must give me gold (in grams) equal to the date on which I come.In preparation for the visit, the king demands that his jeweler make gold rings of 1 to 31 grams.The wise jeweler made only 5 rings and the king was able to fulfill the learned man�s wish. Find the weight of the second heaviest among the 5 unique coins.",
+      "answer": "8"
+    },
+    {
+      "question": "What is the sum of the digits of the number of 7-digited palindromes?",
+      "answer": "9"
+    },
+    {
+      "question": "Let the number of quadrilaterals that can be drawn inside a 2,017-sided polygon with exactly three sides in common be �T�.If �T� can be expressed as (a^b) + (b^a), (a,b>0), Find �b�.",
+      "answer": "1"
+    },
+    {
+      "question": "A large cube, of total volume 512 cm3 is made up of smaller 1 cm3 cubes. The larger cube is made by following these rules:\n Start from the left hand side, and number the small cubes 1 to 8, from left to right.\n2. Place cube no. 9 behind cube no. 1 to start the second row, and proceed all the way to cube no. 64\n3. Start the second layer on top of cube no 1, and build the second layer from left to right, and front to back like the first layer.\nOn the bottom-most square layer of the cube, consider the surface diagonal that has the square numbered 8. If the sum of all the numbers on the cubes on this surface diagonalon the bottom-most layer is �S�, Find the sum of digits of the product of digits of �S�.",
+      "answer": "0",
+      "Imagelink": "Images/cube.jpg"
+    }
+  ]
+
+}
